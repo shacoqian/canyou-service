@@ -16,3 +16,5 @@ $app->get('/', function () use ($app) {
 });
 
 $app->get('/api/default', ['uses' => "DefaultController@index"]);
+$app->get('/api/database', ['uses' => "DefaultController@database"]);
+$app->get('/api/redis', ['uses' => "DefaultController@redis"]);
