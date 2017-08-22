@@ -69,6 +69,10 @@ $app->singleton(
 //     'auth' => App\Http\Middleware\Authenticate::class,
 // ]);
 
+$app->routeMiddleware([
+    'form' => App\Http\Middleware\FormRequestMiddleware::class
+]);
+
 /*
 |--------------------------------------------------------------------------
 | Register Service Providers

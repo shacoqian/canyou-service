@@ -15,6 +15,6 @@ $app->get('/', function () use ($app) {
     return $app->version();
 });
 
-$app->get('/api/default', ['uses' => "DefaultController@index"]);
+$app->get('/api/default', ['middleware' => ['form:TestFormRequest'], 'uses' => "DefaultController@index"]);
 $app->get('/api/database', ['uses' => "DefaultController@database"]);
 $app->get('/api/redis', ['uses' => "DefaultController@redis"]);
